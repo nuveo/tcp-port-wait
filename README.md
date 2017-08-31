@@ -19,7 +19,7 @@ echo "Done tcp-port-wait"
 ```
 var p Port
 p.Timeout = time.Duration(10) * time.Second
-timeout, err := p.Check(":9999")
+timeout, err := p.Check("127.0.0.1:5432")
 if err != nil {
 	fmt.Printf(err)
 }
